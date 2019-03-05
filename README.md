@@ -1,7 +1,7 @@
 # TensorFlow-example-by-MNIST
 Two simple tensorflow examples: Predict handwriting images by using MNIST.
 
-### 参考博客内容，尝试写了2个用tensorflow识别手写数字图片的示例，体验了一下**tensorflow**框架。
+### 使用TensorFlow框架对MINIST数据集进行训练，来识别手写数字图片
 
 * example1：   
     1.先用baseline_model.py使用MNIST数据集训练并保存模型。
