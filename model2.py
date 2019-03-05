@@ -79,15 +79,15 @@ saver = tf.train.Saver()
 
 with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
-    for i in range(20000):
+    for i in range(1000):
       batch = mnist.train.next_batch(50)
-      if i%1000 == 0:
+      if i%5 == 0:
         train_accuracy = accuracy.eval(feed_dict={
             x:batch[0], y_: batch[1], keep_prob: 1.0})
         print("step %d, training accuracy %g"%(i, train_accuracy))
       train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
 
-    save_path = saver.save(sess, "tmp_mnist/model.ckpt")
+    save_path = saver.save(sess, "model/model.ckpt")
     print ("Model saved in file: ", save_path)
 
     print("test accuracy %g"%accuracy.eval(feed_dict={x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0}))

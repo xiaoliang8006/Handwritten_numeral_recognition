@@ -71,7 +71,7 @@ def predictint(imvalue):
 
     with tf.Session() as sess:
 
-        saver.restore(sess, "tmp_mnist/model.ckpt")
+        saver.restore(sess, "model/model.ckpt")
         print ("Model restored.")
        
         prediction=tf.argmax(y_conv,1)
@@ -101,7 +101,7 @@ def main(argv=None):
     """
     Main function.
     """
-    path = "map/testmap5.jpg"
+    path = "test/testmap0.jpg"
     
     imvalue = imageprepare(path)
     
