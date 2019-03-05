@@ -16,6 +16,8 @@ Two simple tensorflow examples: Predict handwriting images by using MNIST.
     2.在用predict2.py 解析手写数字图片并调用模型文件识别图片中的数字。
 
 	#### 改进后效果很好！
+
+### 注意:使用IDE运行时总是报错，在命令行模式下可以正常运行！
     
 ### 刚开始学习TensorFlow,如果有不正确的地方还望指正！
 
